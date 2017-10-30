@@ -31,8 +31,10 @@ kirby()->set('route', [
             throw new Exception('The option "paperback.include.templates" must be an array.');
         }
 
-        $languages = site()->languages();
-        $pages     = site()->index();
+        $languages   = site()->languages();
+        $pages       = site()->index();
+        $title       = site()->title();
+        $description = site()->description();
 
         if (! $includeInvisibles) {
             $pages = $pages->visible();
@@ -60,7 +62,7 @@ kirby()->set('route', [
         }
 
         $template = __DIR__ . DS . 'paperback-export.txt.php';
-        $paperback  = tpl::load($template, compact('languages', 'pages'));
+        $paperback  = tpl::load($template, compact('languages', 'pages', 'title', 'description'));
 
         return new response($paperback, 'txt');
     }
