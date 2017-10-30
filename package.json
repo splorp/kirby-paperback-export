@@ -1,0 +1,8 @@
+{
+  "name": "paperback-export",
+  "author": "Grant Hutchinson <grant@aplorp.com>",
+  "version": "1.0.0",
+  "description": "Kirby PaperBack Export",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
