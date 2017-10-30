@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Kirby PaperBack Export
+ * Kirby Paperback Export
  *
  * @version   1.0.0
  * @author    Grant Hutchinson <grant@splorp.com>

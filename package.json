@@ -2,7 +2,7 @@
   "name": "paperback-export",
   "author": "Grant Hutchinson <grant@aplorp.com>",
   "version": "1.0.0",
-  "description": "Kirby PaperBack Export",
+  "description": "Kirby Paperback Export",
   "type": "kirby-plugin",
   "license": "MIT"
 }
