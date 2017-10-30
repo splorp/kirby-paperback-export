@@ -16,16 +16,19 @@ kirby()->set('route', [
     'pattern' => 'export/paperback',
     'action'  => function() {
 
-        $includeInvisibles = c::get('paperback.include.invisible', false);
-        $ignoredPages      = c::get('paperback.ignored.pages', []);
-        $ignoredTemplates  = c::get('paperback.ignored.templates', []);
+        $includePages      = c::get('paperback.include.pages', ['terms']);
+        $includeChildren   = c::get('paperback.include.children', []);
+        $includeTemplates  = c::get('paperback.include.templates', []);
+        $includeInvisibles = c::get('paperback.include.invisible', true);
 
-        if (! is_array($ignoredPages)) {
-            throw new Exception('The option "paperback.ignored.pages" must be an array.');
+        if (! is_array($includePages)) {
+            throw new Exception('The option "paperback.include.pages" must be an array.');
         }
-
-        if (! is_array($ignoredTemplates)) {
-            throw new Exception('The option "paperback.ignored.templates" must be an array.');
+        if (! is_array($includeChildren)) {
+            throw new Exception('The option "paperback.include.children" must be an array.');
+        }
+        if (! is_array($includeTemplates)) {
+            throw new Exception('The option "paperback.include.templates" must be an array.');
         }
 
         $languages = site()->languages();
@@ -35,9 +38,14 @@ kirby()->set('route', [
             $pages = $pages->visible();
         }
 
+        if ($includePages) {
+            $pages = $pages->find($includePages)->children();
+        }
+
+/**
         $pages = $pages
-                    ->not($ignoredPages)
-                    ->filterBy('intendedTemplate', 'not in', $ignoredTemplates);
+			->filterBy('intendedTemplate', 'not in', $ignoredTemplates);
+*/
 
         $process = c::get('paperback.process', null);
 
