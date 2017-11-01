@@ -35,6 +35,7 @@ kirby()->set('route', [
         $pages       = site()->index();
         $title       = site()->title();
         $description = site()->description();
+        $version     = site()->version();
 
         if (! $includeInvisibles) {
             $pages = $pages->visible();
@@ -62,7 +63,7 @@ kirby()->set('route', [
         }
 
         $template = __DIR__ . DS . 'paperback-export.txt.php';
-        $paperback  = tpl::load($template, compact('languages', 'pages', 'title', 'description'));
+        $paperback  = tpl::load($template, compact('languages', 'pages', 'title', 'description', 'version'));
 
         return new response($paperback, 'txt');
     }
