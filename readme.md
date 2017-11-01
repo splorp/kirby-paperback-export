@@ -18,8 +18,8 @@ Paperback is a simple cross-platform utility created by [David Fedor](http://the
 
 + Paragraphs in the exported text should be separated by double line breaks
 + The exported content is not timestamped or versioned
-+ The filename used for the exported content is generic
 + Page filtering and selection options are not currently functional
++ Output is currently optimized for the [Newton Glossary](http://newtonglossary.com/) instance of [Kirby](https://getkirby.com/)
 
 ### Release Notes
 
