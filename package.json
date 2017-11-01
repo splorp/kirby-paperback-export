@@ -1,6 +1,6 @@
 {
   "name": "paperback-export",
-  "author": "Grant Hutchinson <grant@aplorp.com>",
+  "author": "Grant Hutchinson <grant@splorp.com>",
   "version": "1.0.0",
   "description": "Kirby Paperback Export",
   "type": "kirby-plugin",
