@@ -31,8 +31,8 @@ c::set('paperback.exclude.template', []);
 
 ## Known Issues
 
-+ Paragraphs in the exported text should be separated by double line breaks
-+ The exported content is not timestamped or versioned
++ Exported content is not timestamped or versioned
++ The breaks surrounding headings are collapsed so text block are mashed together
 + Output is currently optimized for the [Newton Glossary](http://newtonglossary.com/) instance of [Kirby](https://getkirby.com/)
 
 ## Release Notes
