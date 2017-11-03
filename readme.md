@@ -32,16 +32,21 @@ c::set('paperback.exclude.template', []);
 ## Known Issues
 
 + Exported content is not timestamped or versioned
-+ The breaks surrounding headings are collapsed so text block are mashed together
++ Linebreaks surrounding headings are collapsed so text blocks are mashed together
 + Output is currently optimized for the [Newton Glossary](http://newtonglossary.com/) instance of [Kirby](https://getkirby.com/)
 
 ## Release Notes
 
 ### 1.0.1
 + Refactored filtering options
++ Fixed formatting of paragraph breaks in `$page->text()`
 
 ### 1.0.0
 + Initial release
+
+## Acknowledgements
+
+A tip of the hat to [Pedro Borges](https://pedroborg.es/) and his [Kirby XML Sitemap](https://github.com/pedroborges/kirby-xml-sitemap) for providing the necessary framework and inspiration to attempt my own plugin.
 
 ## License
 
