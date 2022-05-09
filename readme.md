@@ -16,7 +16,7 @@ Paperback is a simple cross-platform utility created by [David Fedor](https://we
 
 ## Installation
 
-After installing the plugin using one of the methods listed below, visiting `yoursite.com/export/paperback` should automatically download a text file without any additional configuration.
+After installing the plugin using one of the methods below, visiting `yoursite.com/export/paperback` should automatically download a text file without any additional configuration.
 
 ### Download
 
@@ -24,15 +24,7 @@ To install the plugin manually, [download the current release](https://github.co
 
 `site/plugins/paperback-export`
 
-### Kirby CLI
-
-Installing the plugin using the Kirby [command line interface](https://github.com/getkirby/cli):
-
-    $ kirby plugin:install splorp/kirby-paperback-export
-
-Updating the plugin using the Kirby CLI:
-
-    $ kirby plugin:update splorp/kirby-paperback-export
+For [Kirby 2](https://github.com/getkirby-v2), download version [1.0.1](https://github.com/splorp/kirby-paperback-export/releases/tag/1.0.1) of the plugin.
 
 ### Git Submodule
 
@@ -53,17 +45,23 @@ Updating the plugin as a Git submodule:
     
 ## Options
 
-By default, Kirby Paperback Export will include the text from the title and description fields for every page on your Kirby site, including invisible pages. The following options allow you to select and filter which pages are included.
+By default, Kirby Paperback Export will include the text from the title and description fields for every page on your Kirby site, including unlisted pages. The following options allow you to filter which pages are included in the exported data.
 
 ```php
-// Include invisible pages
-c::set('paperback.include.invisible', true);
+// Include unlisted pages
+return [
+	'splorp.paperback-export.includeUnlisted' => true,
+];
 
 // Include only the children of a specific page
-c::set('paperback.include.children', []);
+return [
+	'splorp.paperback-export.includeChildren' => [],
+];
 
 // Exclude specific templates
-c::set('paperback.exclude.template', []);
+return [
+	'splorp.paperback-export.excludeTemplate' => [],
+];
 ```
 
 ## Known Issues
@@ -73,6 +71,12 @@ c::set('paperback.exclude.template', []);
 + Output is currently optimized for the [Newton Glossary](https://newtonglossary.com/) instance of [Kirby](https://getkirby.com/)
 
 ## Release Notes
+
+### 2.0.0
++ Refactored and updated for Kirby 3
++ Tweaked the option names to be more consistent and self explanatory
++ Moved the file export code into `snippets/export.php`
++ Renamed `snippets/page.php` to `snippets/content.php`
 
 ### 1.0.1
 + Refactored filtering options
@@ -87,7 +91,7 @@ A tip of the hat to [Pedro Borges](https://pedroborg.es/) and his [Kirby XML Sit
 
 ## License
 
-Copyright © 2017 Grant Hutchinson
+Copyright © 2017–2021 Grant Hutchinson
 
 This project is licensed under the short and sweet [MIT License](https://opensource.org/licenses/MIT). This license allows you to do anything pretty much anything you want with the contents of the repository, as long as you provide proper attribution and don’t hold anyone liable.
 
