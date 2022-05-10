@@ -91,7 +91,7 @@ A tip of the hat to [Pedro Borges](https://pedroborg.es/) and his [Kirby XML Sit
 
 ## License
 
-Copyright © 2017–2021 Grant Hutchinson
+Copyright © 2017–2022 Grant Hutchinson
 
 This project is licensed under the short and sweet [MIT License](https://opensource.org/licenses/MIT). This license allows you to do anything pretty much anything you want with the contents of the repository, as long as you provide proper attribution and don’t hold anyone liable.
 
