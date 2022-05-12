@@ -1,6 +1,6 @@
 # Kirby Paperback Export
 
-Export [Kirby](https://getkirby.com/) content for use with the [Paperback Book Maker](https://ritsuko.chuma.org/paperback/).
+Export [Kirby](https://getkirby.com/) CMS content for use with the [Paperback Book Maker](https://ritsuko.chuma.org/paperback/).
 
 ## What does this plugin do?
 
@@ -24,7 +24,7 @@ To install the plugin manually, [download the current release](https://github.co
 
 `site/plugins/paperback-export`
 
-For [Kirby 2](https://github.com/getkirby-v2), download version [1.0.1](https://github.com/splorp/kirby-paperback-export/releases/tag/1.0.1) of the plugin.
+For [Kirby 2](https://github.com/getkirby-v2) sites, download version [1.0.1](https://github.com/splorp/kirby-paperback-export/releases/tag/1.0.1) of the plugin.
 
 ### Git Submodule
 
@@ -47,20 +47,51 @@ Updating the plugin as a Git submodule:
 
 By default, Kirby Paperback Export will include the text from the title and description fields for every page on your Kirby site, including unlisted pages. The following options allow you to filter which pages are included in the exported data.
 
+These optional settings can be added to the `site/config/config.php` file.
+
+### Include Unlisted Pages
+
+This option is set to true by default.
+
 ```php
-// Include unlisted pages
 return [
 	'splorp.paperback-export.includeUnlisted' => true,
 ];
+```
 
-// Include only the children of a specific page
+### Include only the children of specific pages
+
+This option is not set by default.
+
+```php
 return [
 	'splorp.paperback-export.includeChildren' => [],
 ];
+```
 
-// Exclude specific templates
+Specify one or more pages as an array.
+
+```php
+return [
+	'splorp.paperback-export.includeChildren' => ['blog','newsletter'],
+];
+```
+
+### Exclude specific templates
+
+This option is not set by default.
+
+```php
 return [
 	'splorp.paperback-export.excludeTemplate' => [],
+];
+```
+
+Specify one or more templates as an array.
+
+```php
+return [
+	'splorp.paperback-export.excludeTemplate' => ['about','search'],
 ];
 ```
 
