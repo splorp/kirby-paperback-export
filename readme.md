@@ -45,11 +45,9 @@ Updating the plugin as a Git submodule:
     
 ## Options
 
-By default, Kirby Paperback Export will include the text from the title and description fields for every page on your Kirby site, including unlisted pages. The following options allow you to filter which pages are included in the exported data.
+By default, text located in the `$page->title()` and `$page->text()` fields for every page on your Kirby site will be included in the exported data. The following options can be added to the `site/config/config.php` file, allowing you to filter which pages are included based on certain criteria.
 
-These optional settings can be added to the `site/config/config.php` file.
-
-### Include Unlisted Pages
+### Include unlisted pages
 
 This option is set to true by default.
 
@@ -59,7 +57,9 @@ return [
 ];
 ```
 
-### Include only the children of specific pages
+### Include Children Pages
+
+Pages specified in this option will not be included, but the children of those pages will be included in the exported data.
 
 This option is not set by default.
 
@@ -77,7 +77,9 @@ return [
 ];
 ```
 
-### Exclude specific templates
+### Exclude Templates
+
+Pages using the templates specified in this option will be excluded from the exported data.
 
 This option is not set by default.
 

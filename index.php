@@ -44,13 +44,13 @@ Kirby::plugin('splorp/paperback-export', [
 					$pages = $pages->listed();
 				}
 
-				/* Include only the children of the specified page */
+				/* Include only the children of specified pages */
 
 				if ($includeChildren) {
 					$pages = $pages->find($includeChildren)->children();
 				}
 
-				/* Exclude pages using certain templates */
+				/* Exclude pages using specified templates */
 
 				$pages = $pages->filterBy('intendedTemplate', 'not in', $excludeTemplate);
 
