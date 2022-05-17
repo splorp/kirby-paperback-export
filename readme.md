@@ -99,11 +99,15 @@ return [
 
 ## Known Issues
 
-+ Exported content is not timestamped or versioned
-+ Linebreaks surrounding headings are collapsed so text blocks are mashed together
 + Output is currently optimized for the [Newton Glossary](https://newtonglossary.com/) instance of [Kirby](https://getkirby.com/)
 
 ## Release Notes
+
+### 2.0.1
++ Refactored replacement patterns in string functions
++ Removed extra line breaks introduced by heading elements
++ Better handling of pages containing `<img>` elements
++ Added the current date to the exported file
 
 ### 2.0.0
 + Refactored and updated for Kirby 3
