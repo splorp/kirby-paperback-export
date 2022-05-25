@@ -103,6 +103,9 @@ return [
 
 ## Release Notes
 
+### 2.0.1.1
++ Fixed version number in `index.php`
+
 ### 2.0.1
 + Refactored replacement patterns in string functions
 + Removed extra line breaks introduced by heading elements
