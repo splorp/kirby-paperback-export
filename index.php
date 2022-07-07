@@ -19,9 +19,9 @@ Kirby::plugin('splorp/paperback-export', [
 			'pattern' => 'export/paperback',
 			'action' => function () {
 
-				$includeUnlisted  = option('splorp.paperback-export.includeUnlisted', true);
-				$includeChildren  = option('splorp.paperback-export.includeChildren', []);
-				$excludeTemplate  = option('splorp.paperback-export.excludeTemplate', []);
+				$includeUnlisted = option('splorp.paperback-export.includeUnlisted', true);
+				$includeChildren = option('splorp.paperback-export.includeChildren', []);
+				$excludeTemplate = option('splorp.paperback-export.excludeTemplate', []);
 
 				if (! is_array($includeChildren)) {
 					throw new Exception('The option "splorp.paperback-export.includeChildren" must be an array.');
@@ -54,8 +54,8 @@ Kirby::plugin('splorp/paperback-export', [
 
 				$pages = $pages->filterBy('intendedTemplate', 'not in', $excludeTemplate);
 
-				$template = __DIR__ . '/snippets/export.php';
-				$paperback  = tpl::load($template, compact('languages', 'pages', 'title', 'description', 'version', 'datestamp', 'filename'));
+				$template  = __DIR__ . '/snippets/export.php';
+				$paperback = tpl::load($template, compact('languages', 'pages', 'title', 'description', 'version', 'datestamp', 'filename'));
 
 				return new response($paperback, 'txt');
 			}
