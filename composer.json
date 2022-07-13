@@ -13,6 +13,10 @@
 			"homepage": "https://splorp.com/"
 		}
 	],
+	"support": [
+		"docs": "https://github.com/splorp/kirby-paperback-export/blob/master/readme.md",
+		"source": "https://github.com/splorp/kirby-paperback-export"
+	]
 	"require": {
 		"getkirby/composer-installer": "^1.1"
 	},
