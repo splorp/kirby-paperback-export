@@ -103,6 +103,9 @@ return [
 
 ## Release Notes
 
+### 2.0.2
++ Added `keywords`, `homepage`, `support.docs`, `support.source` to `composer.json`
+
 ### 2.0.1.1
 + Fixed version number in `index.php`
 
