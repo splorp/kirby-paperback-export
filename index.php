@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Kirby Paperback Export
- *
- * @version   2.0.2
- * @author    Grant Hutchinson <grant@splorp.com>
- * @copyright Grant Hutchinson <grant@splorp.com>
- * @link      https://github.com/splorp/kirby-paperback-export
- * @license   MIT
- */
-
 Kirby::plugin('splorp/paperback-export', [
 	'snippets' => [
 		'paperback-export/content' => __DIR__ . '/snippets/content.php',
