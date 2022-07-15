@@ -13,11 +13,17 @@ Kirby::plugin('splorp/paperback-export', [
 				$includeChildren = option('splorp.paperback-export.includeChildren', []);
 				$excludeTemplate = option('splorp.paperback-export.excludeTemplate', []);
 
+				if (! is_string($prefix)) {
+					throw new Exception('The option “splorp.paperback-export.prefix” must be a string.');
+				}
+				if (! is_bool($includeUnlisted)) {
+					throw new Exception('The option “splorp.paperback-export.includeUnlisted” must be a boolean.');
+				}
 				if (! is_array($includeChildren)) {
-					throw new Exception('The option "splorp.paperback-export.includeChildren" must be an array.');
+					throw new Exception('The option “splorp.paperback-export.includeChildren” must be an array.');
 				}
 				if (! is_array($excludeTemplate)) {
-					throw new Exception('The option "splorp.paperback-export.excludeTemplate" must be an array.');
+					throw new Exception('The option “splorp.paperback-export.excludeTemplate” must be an array.');
 				}
 
 				$languages   = site()->languages();
