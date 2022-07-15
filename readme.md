@@ -123,8 +123,14 @@ return [
 
 ## Release Notes
 
+### 2.0.3
++ Added option to specify the table of contents prefix
++ Added better exception checking for option values
++ Fixed malformed `support` field in `composer.json`
++ Removed extraneous comments from `index.php`
+
 ### 2.0.2
-+ Added `keywords`, `homepage`, `support.docs`, `support.source` to `composer.json`
++ Added `keywords`, `homepage`, `support.docs`, `support.source` fields to `composer.json`
 
 ### 2.0.1.1
 + Fixed version number in `index.php`
