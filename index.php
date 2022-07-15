@@ -8,6 +8,7 @@ Kirby::plugin('splorp/paperback-export', [
 			'pattern' => 'export/paperback',
 			'action' => function () {
 
+				$prefix = option('splorp.paperback-export.prefix', '');
 				$includeUnlisted = option('splorp.paperback-export.includeUnlisted', true);
 				$includeChildren = option('splorp.paperback-export.includeChildren', []);
 				$excludeTemplate = option('splorp.paperback-export.excludeTemplate', []);
@@ -32,7 +33,7 @@ Kirby::plugin('splorp/paperback-export', [
 				if (! $includeUnlisted) {
 					$pages = $pages->listed();
 				}
-
+				
 				/* Include only the children of specified pages */
 
 				if ($includeChildren) {
@@ -44,7 +45,7 @@ Kirby::plugin('splorp/paperback-export', [
 				$pages = $pages->filterBy('intendedTemplate', 'not in', $excludeTemplate);
 
 				$template  = __DIR__ . '/snippets/export.php';
-				$paperback = tpl::load($template, compact('languages', 'pages', 'title', 'description', 'version', 'datestamp', 'filename'));
+				$paperback = tpl::load($template, compact('languages', 'pages', 'title', 'description', 'prefix', 'version', 'datestamp', 'filename'));
 
 				return new response($paperback, 'txt');
 			}

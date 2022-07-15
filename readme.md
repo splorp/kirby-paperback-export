@@ -45,9 +45,29 @@ Updating the plugin as a Git submodule:
     
 ## Options
 
-By default, text located in the `$page->title()` and `$page->text()` fields for every page on your Kirby site will be included in the exported data. The following options can be added to the `site/config/config.php` file, allowing you to filter which pages are included based on certain criteria.
+### Table of contents prefix
+
+Paperback books can include a table of contents created from the text found located in the `$page->title()` field. The following option can be added to the `site/config/config.php` file, allowing you to specify a custom table of contents prefix.
+
+This option is not set by default.
+
+```php
+return [
+	'splorp.paperback-export.tocPrefix' => '',
+];
+```
+
+Specify a prefix.
+
+```php
+return [
+	'splorp.paperback-export.tocPrefix' => ['@@TOC '],
+];
+```
 
 ### Include unlisted pages
+
+By default, text located in the `$page->title()` and `$page->text()` fields for every page on your Kirby site will be included in the exported data. The following options can be added to the `site/config/config.php` file, allowing you to filter which pages are included based on certain criteria.
 
 This option is set to true by default.
 
