@@ -57,7 +57,7 @@ return [
 ];
 ```
 
-Specify a prefix.
+Specify a table of contents prefix.
 
 ```php
 return [
@@ -141,11 +141,10 @@ return [
 ];
 ```
 
-## Known Issues
-
-+ Output is currently optimized for the [Newton Glossary](https://newtonglossary.com/) instance of [Kirby](https://getkirby.com/)
-
 ## Release Notes
+
+### 2.0.4
++ Added option to specify other content fields
 
 ### 2.0.3
 + Added option to specify the table of contents prefix
