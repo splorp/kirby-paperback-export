@@ -61,7 +61,7 @@ Specify a table of contents prefix.
 
 ```php
 return [
-	'splorp.paperback-export.prefix' => ['@@TOC '],
+	'splorp.paperback-export.prefix' => '@@TOC ',
 ];
 ```
 
