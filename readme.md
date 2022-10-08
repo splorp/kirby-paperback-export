@@ -149,7 +149,7 @@ This option is set to false by default.
 
 ```php
 return [
-	'splorp.paperback-export.includeUnlisted' => false,
+	'splorp.paperback-export.includeDatestamp' => false,
 ];
 ```
 
