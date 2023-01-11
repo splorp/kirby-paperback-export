@@ -155,6 +155,9 @@ return [
 
 ## Release Notes
 
+### 2.0.6
++ Improved handling of pages containing `<img>` elements
+
 ### 2.0.5
 + Added option to specify inclusion of the datestamp
 
