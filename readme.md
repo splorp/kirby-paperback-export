@@ -2,6 +2,8 @@
 
 Export [Kirby](https://getkirby.com/) CMS content for use with the [Paperback Book Maker](https://ritsuko.chuma.org/paperback/).
 
+This plugin is compatible with both Kirby 3 and Kirby 4.
+
 ## What does this plugin do?
 
 The plugin generates a lightly formatted plain text file from a set of pages specified by the user. The text file is used to create a “book” package which can be viewed on a Newton OS device.
