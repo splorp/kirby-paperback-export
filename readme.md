@@ -2,7 +2,7 @@
 
 Export [Kirby](https://getkirby.com/) CMS content for use with the [Paperback Book Maker](https://ritsuko.chuma.org/paperback/).
 
-This plugin is compatible with both Kirby 3 and Kirby 4.
+This plugin is compatible with Kirby 3, Kirby 4, and Kirby 5.
 
 For [Kirby 2](https://github.com/getkirby-v2) sites, download version [1.0.1](https://github.com/splorp/kirby-paperback-export/releases/tag/1.0.1) of the plugin.
 
@@ -158,6 +158,9 @@ return [
 ```
 
 ## Release Notes
+
+### 2.0.7
++ Changed `version` field to avoid conflict with Kirby 5 reserved field names
 
 ### 2.0.6
 + Improved handling of pages containing `<img>` elements
